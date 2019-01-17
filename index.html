@@ -24,3 +24,38 @@
     </script>
 </body>
 </html>
+Corrigé :
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <form>
+        <div><label for="lastName">Nom : </label><input type="text" name="lastName" id="lastName" /></div> 
+        <div><label for="firstName">Prénom : </label><input type="text" name="firstName" id="firstName" /></div>
+        <div><input type="submit" name="button" value="Envoyer" /></div>
+    </form>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () { 
+            $('input').focus(function () {
+                $(this).css('border', '1px solid green');  //Quand la personne appuie sur le champs j'appelle input grâce au this pour mettre le champs en bordure verte
+            });
+            $('input').blur(function () {
+                $(this).css('border', '1px solid red');  // Si il perd le focus la bordure devient rouge
+            });
+            //$('input').focusin(function () {
+            //    $(this).css('border', '1px solid green');  //Quand la personne appuie sur le champs j'appelle input grâce au this pour mettre le champs en bordure verte
+            //});
+            //$('input').focusout(function () {
+            //    $(this).css('border', '1px solid red');  // Si il perd le focus la bordure devient rouge
+            //});
+        });
+    </script>
+</body>
+</html>
+
